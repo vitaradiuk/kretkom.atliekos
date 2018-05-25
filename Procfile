@@ -1,1 +1,0 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* lt.kvk.i11.radiukiene.atliekosAPI.KretkomApplication
