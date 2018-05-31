@@ -35,4 +35,15 @@ public class WasteCollectionController {
 		jsonObject.put("result", code.get());
 		return jsonObject;
 	}
+	
+	//one street wasteCollection data
+		@RequestMapping(value = "", method = RequestMethod.GET)
+		public JSONObject wastesz1(@RequestParam String street_id) throws InterruptedException, ExecutionException {
+			JSONObject jsonObject = new JSONObject();
+			System.out.println("sss");
+
+			Future<List<WasteCollection>>code = service.wasteCollectionListStreet(street_id);
+			jsonObject.put("result", code.get());
+			return jsonObject;
+		}
 }
