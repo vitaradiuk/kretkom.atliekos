@@ -89,91 +89,91 @@
 	<build>
 		<!-- <finalName>atliekos_Api</finalName> -->
 
-		
+
 		<plugins>
 
-<!-- 			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
-					<archive>          
-						<manifest>                
-							<addClasspath>true</addClasspath>              
-							<classpathPrefix>libs/</classpathPrefix>                
-							<mainClass>lt.kvk.i11.radiukiene.atliekosAPI.KretkomApplication</mainClass>            
-						</manifest>        
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>libs/</classpathPrefix>
+							<mainClass>lt.kvk.i11.radiukiene.atliekosAPI.KretkomApplication</mainClass>
+						</manifest>
 					</archive>
 				</configuration>
 			</plugin> -->
 
-<plugin>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-maven-plugin</artifactId>
-    <executions>
-        <execution>
-            <goals>
-                <goal>repackage</goal>
-            </goals>
-            <configuration>
-                <classifier>spring-boot</classifier>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
-
-
-
-
-
-<!--heroku -->
 			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.0.2</version>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 				<executions>
 					<execution>
-						<phase>package</phase>
 						<goals>
-							<goal>copy</goal>
+							<goal>repackage</goal>
 						</goals>
 						<configuration>
-							<processTypes>
-								<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
-							</processTypes>
-							<artifactItems>
-								<artifactItem>
-									<groupId>com.github.jsimone</groupId>
-									<artifactId>webapp-runner</artifactId>
-									<version>8.5.31.0</version>
-									<destFileName>webapp-runner.jar</destFileName>
-								</artifactItem>
-							</artifactItems>
+							<classifier>spring-boot</classifier>
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>appassembler-maven-plugin</artifactId>
-				<version>2.0.0</version>
-				<configuration>
-					<assembleDirectory>target</assembleDirectory>
-					<programs>
-						<program>
-							<mainClass>KretkomApplication</mainClass>
-							<name>webapp</name>
-						</program>
-					</programs>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>assemble</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin> -->
+
+
+
+
+
+			<!--heroku -->
+			<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-dependency-plugin</artifactId>
+	<version>3.0.2</version>
+	<executions>
+		<execution>
+			<phase>package</phase>
+			<goals>
+				<goal>copy</goal>
+			</goals>
+			<configuration>
+				<processTypes>
+					<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+				</processTypes>
+				<artifactItems>
+					<artifactItem>
+						<groupId>com.github.jsimone</groupId>
+						<artifactId>webapp-runner</artifactId>
+						<version>8.5.31.0</version>
+						<destFileName>webapp-runner.jar</destFileName>
+					</artifactItem>
+				</artifactItems>
+			</configuration>
+		</execution>
+	</executions>
+</plugin>
+	<plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>appassembler-maven-plugin</artifactId>
+		<version>2.0.0</version>
+		<configuration>
+			<assembleDirectory>target</assembleDirectory>
+			<programs>
+				<program>
+					<mainClass>lt.kvk.i11.radiukiene.atliekosAPI.KretkomApplication</mainClass>
+					<name>webapp</name>
+				</program>
+			</programs>
+		</configuration>
+		<executions>
+			<execution>
+				<phase>package</phase>
+				<goals>
+					<goal>assemble</goal>
+				</goals>
+			</execution>
+		</executions>
+	</plugin>
 		</plugins>
 	</build>
 
