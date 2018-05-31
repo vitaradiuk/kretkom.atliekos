@@ -17,14 +17,11 @@ public class UpdateWaste {
 	@Column(name = "wasteCollect_date")
 	String wasteCollectDate;
 	
-	/*@Column(name = "reminder_status")
-	String reminderStatus;*/
 
-	public UpdateWaste (String wasteCollectId, String wasteCollectDate/*, String reminderStatus*/) {
+	public UpdateWaste (String wasteCollectId, String wasteCollectDate) {
 		super();
 		this.wasteCollectId = wasteCollectId;
 		this.wasteCollectDate = wasteCollectDate;
-		//this.reminderStatus = reminderStatus;
 	}
 
 	public UpdateWaste() {
@@ -47,11 +44,4 @@ public class UpdateWaste {
 		this.wasteCollectDate = wasteCollectDate;
 	}
 	
-	/*public String getReminderStatus() {
-		return reminderStatus;
-	}
-
-	public void setReminderStatus(String reminderStatus) {
-		this.reminderStatus = reminderStatus;
-	}*/
 }

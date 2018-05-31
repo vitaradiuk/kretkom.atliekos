@@ -20,16 +20,12 @@ public class AllWasteCollection {
 	@Column(name = "wasteCollect_date")
 	String wasteCollectDate;
 
-	/*@Column(name = "reminder_status")
-	String reminderStatus;*/
-
-	public AllWasteCollection(String streetId, int wasteId, String wasteCollectDate/*,String reminderStatus*/) {
+	public AllWasteCollection(String streetId, int wasteId, String wasteCollectDate) {
 		super();
 		
 		this.streetId = streetId;
 		this.wasteId = wasteId;
 		this.wasteCollectDate = wasteCollectDate;
-		//this.reminderStatus=reminderStatus;
 	}
 
 	public AllWasteCollection() {
@@ -60,11 +56,4 @@ public class AllWasteCollection {
 		this.wasteCollectDate = wasteCollectDate;
 	}
 	
-	/*public String getReminderStatus() {
-		return reminderStatus;
-	}
-
-	public void setReminderStatus(String reminderStatus) {
-		this.reminderStatus = reminderStatus;
-	}*/
 }

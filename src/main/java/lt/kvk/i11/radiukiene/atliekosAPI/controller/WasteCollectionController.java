@@ -25,27 +25,6 @@ public class WasteCollectionController {
 	@Autowired
 	ServiceInterface service;
 
-	/*//update wasteCollection notification
-	@RequestMapping(value = "/updatereminder", method = RequestMethod.POST)
-	public StatusBean wasteCollections(@Valid UpdateWaste model, BindingResult result)
-			throws InterruptedException, ExecutionException {
-
-		Future<Integer> code = service.addWasteCollection(model);
-		StatusBean bean = new StatusBean(code.get());
-		return bean;
-	}*/
-
-
-	/*//insert the wasteCollection
-	@RequestMapping(value = "/insertwastecollection", method = RequestMethod.POST)
-	public StatusBean timetablesadd(@Valid AllWasteCollection model, BindingResult result)
-			throws InterruptedException, ExecutionException {
-
-		Future<Integer> code = service.wasteCollectionStreets(model);
-		StatusBean bean = new StatusBean(code.get());
-		return bean;
-	}*/
-
 	//one street wasteCollection data
 	@RequestMapping(value = "wastecollections", method = RequestMethod.GET)
 	public JSONObject wastesz(@RequestParam String street_id) throws InterruptedException, ExecutionException {

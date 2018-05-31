@@ -12,4 +12,5 @@ lt\kvk\i11\radiukiene\atliekosAPI\model\Street.class
 lt\kvk\i11\radiukiene\atliekosAPI\service\ServiceInterface.class
 lt\kvk\i11\radiukiene\atliekosAPI\component\StatusBean.class
 lt\kvk\i11\radiukiene\atliekosAPI\service\ServiceImpl.class
+lt\kvk\i11\radiukiene\atliekosAPI\KretkomApplication.class
 lt\kvk\i11\radiukiene\atliekosAPI\dao\StreetDaoImpl.class

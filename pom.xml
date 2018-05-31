@@ -87,11 +87,46 @@
 
 
 	<build>
-		<finalName>atliekos_Api</finalName>
+		<!-- <finalName>atliekos_Api</finalName> -->
 
-		<!--heroku -->
+		
 		<plugins>
-			<plugin>
+
+<!-- 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>          
+						<manifest>                
+							<addClasspath>true</addClasspath>              
+							<classpathPrefix>libs/</classpathPrefix>                
+							<mainClass>lt.kvk.i11.radiukiene.atliekosAPI.KretkomApplication</mainClass>            
+						</manifest>        
+					</archive>
+				</configuration>
+			</plugin> -->
+
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>repackage</goal>
+            </goals>
+            <configuration>
+                <classifier>spring-boot</classifier>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+
+
+
+
+
+<!--heroku -->
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<version>3.0.2</version>
@@ -138,7 +173,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 

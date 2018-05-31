@@ -24,17 +24,8 @@ public class StreetController {
 	@Autowired
 	ServiceInterface service;
 
-	/*// api to register a street
-	@RequestMapping(value = "/addstreet", method = RequestMethod.POST)
-	public StatusBean wasteCollections(@Valid Street model, BindingResult result)
-			throws InterruptedException, ExecutionException {
-		Future<Integer> code = service.addStreet(model);
-		StatusBean bean = new StatusBean(code.get());
-		return bean;
-	}*/
-
 	// api to get all streets
-	@RequestMapping(value = "/streets", method = RequestMethod.GET)
+	@RequestMapping(value = "streets", method = RequestMethod.GET)
 	public JSONObject streets() throws InterruptedException, ExecutionException {
 		JSONObject jsonObject = new JSONObject();
 		Future<List<Street>>code = service.streetList();
@@ -43,7 +34,7 @@ public class StreetController {
 	}
 
 	// api to get all wastes
-	@RequestMapping(value = "/wastes", method = RequestMethod.GET)
+	@RequestMapping(value = "wastes", method = RequestMethod.GET)
 	public JSONObject wastes() throws InterruptedException, ExecutionException {
 		JSONObject jsonObject = new JSONObject();
 		Future<List<Waste>>code = service.wasteList();
