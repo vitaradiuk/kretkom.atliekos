@@ -27,9 +27,6 @@ public class StatusBean { // bean status code class
 		if (code == 200) {
 			this.Status = "Success";
 		}
-		else if (code == 201) {
-			this.Status = "AlreadyExist";
-		}
 		else if (code == 400) {
 			this.Status = "BadRequest";
 		}
@@ -39,23 +36,11 @@ public class StatusBean { // bean status code class
 		else if (code == 404) {
 			this.Status = "notfound";
 		}
-		else if (code == 405) {
-			this.Status = "MethodNotAllowed";
-		}
 		else if (code == 503) {
 			this.Status = "ServerNotFound";
 		}
 		else if (code == 500) {
 			this.Status = "InternalServerError";
-		}
-		else if (code == 202) {
-			this.Status = "InvalidDateFormat";
-		}
-		else if (code == 209) {
-			this.Status = "productOutOfStock";
-		}
-		else if (code == 101) {
-			this.Status = "Can't Add More Users";
 		}
 		else {
 			this.code = 409;
